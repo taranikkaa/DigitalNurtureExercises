@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <p class="site-name">Student Portal</p>
+        <!-- Mobile menu placeholder text (hidden on desktop) -->
+        <div class="menu-hamburger">☰ Menu</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Grades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Welcome to the Student Portal</h1>
+            <p>Track your courses, grades, and notifications all in one place.</p>
+            <button>Explore Courses</button>
+        </section>
+
+        <!-- Task 1: Student Stats Bar Section -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-num">5</span>
+                <span class="stat-label">Courses Enrolled</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">3.8</span>
+                <span class="stat-label">Current GPA</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">6</span>
+                <span class="stat-label">Active Semester</span>
+            </div>
+        </div>
+
+        <section id="courses">
+            <h2>Your Courses</h2>
+            
+            <!-- Task 2: Wrapped in the new grid container -->
+            <div class="course-grid">
+                <article class="course-card">
+                    <h3>Data Structures</h3>
+                    <p>Learn arrays, linked lists, trees, and graphs.</p>
+                    <span>4 credits</span>
+                </article>
+
+                <article class="course-card">
+                    <h3>Database Systems</h3>
+                    <p>SQL, normalization, and transaction management.</p>
+                    <span>3 credits</span>
+                </article>
+
+                <article class="course-card">
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript, and modern frameworks.</p>
+                    <span>3 credits</span>
+                </article>
+
+                <!-- Added Course 4 -->
+                <article class="course-card">
+                    <h3>Operating Systems</h3>
+                    <p>Kernel development, processes, memory management, and threads.</p>
+                    <span>4 credits</span>
+                </article>
+
+                <!-- Added Course 5 -->
+                <article class="course-card">
+                    <h3>Computer Networks</h3>
+                    <p>TCP/IP architecture, routing protocol schemes, and safety layers.</p>
+                    <span>3 credits</span>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>/* Footer */</p>
+        <p>&copy; 2026 Student Portal. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
