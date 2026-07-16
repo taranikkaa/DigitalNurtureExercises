@@ -1,0 +1,30 @@
+<div style="padding: 20px;">
+  <h3>Available Courses</h3>
+  
+  <div *ngIf="loading" style="color: #007bff; font-weight: bold; margin: 10px 0;">
+    Loading courses from API...
+  </div>
+
+  <div *ngIf="!loading">
+    <input 
+      type="text" 
+      [(ngModel)]="searchTerm" 
+      placeholder="Search courses by name..." 
+      style="padding: 8px; width: 100%; max-width: 300px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;"
+    />
+
+    <div *ngIf="filteredCourses.length > 0; else noCoursesMessage">
+      <app-course-card 
+        *ngFor="let course of filteredCourses" 
+        [name]="course.name" 
+        [code]="course.code" 
+        [credits]="course.credits" 
+        [grade]="course.grade">
+      </app-course-card>
+    </div>
+
+    <ng-template #noCoursesMessage>
+      <p style="color: #888; font-style: italic;">No courses found</p>
+    </ng-template>
+  </div>
+</div>
