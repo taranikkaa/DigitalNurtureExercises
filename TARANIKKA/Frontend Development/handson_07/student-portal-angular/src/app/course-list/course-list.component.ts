@@ -17,14 +17,13 @@ export class CourseListComponent implements OnInit, OnDestroy {
   courses: any[] = [];
   loading: boolean = false;
   private sub!: Subscription;
-
+  
   constructor(private courseService: CourseService) {}
 
   ngOnInit(): void {
   this.loading = true;
   this.sub = this.courseService.getCourses().subscribe({
     next: (data) => {
-      // A list of real English course names to replace the Latin text
       const englishCourseNames = [
         'Introduction to Web Development',
         'Database Management Systems',
