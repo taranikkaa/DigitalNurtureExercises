@@ -1,4 +1,19 @@
-* {
+/* 
+  ======================================================
+  TASK 3: COLOUR CONTRAST & BROWSER COMPATIBILITY REPORT
+  ======================================================
+  
+  Step 134: Color Contrast Documentation
+  - Primary Text Colour: #333333 on Background: #FFFFFF 
+  - Contrast Ratio: 12.6:1 (PASSED WCAG AA minimum 4.5:1 requirement)
+
+  Step 136: Caniuse Browser Support Check
+  - Feature Checked: CSS Custom Properties (Variables)
+  - Global Support: ~98.5% on caniuse.com
+  - Findings: Fully supported in all modern browsers. Added css-vars-ponyfill 
+    as a polyfill in index.html to support legacy browsers (IE11/Older versions).
+  ======================================================
+*/* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;

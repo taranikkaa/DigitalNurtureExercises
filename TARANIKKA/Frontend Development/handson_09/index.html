@@ -22,7 +22,14 @@
 <body>
   <header>
     <p class="site-name">Student Portal</p>
-    <nav aria-label="Main navigation">
+    
+    <!-- Step 131: Expandable Mobile Hamburger Button -->
+    <button id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle Navigation Menu">
+      ☰ Menu
+    </button>
+
+    <!-- Step 128: Navigation bar with label -->
+    <nav id="nav-menu" aria-label="Main navigation">
       <ul>
         <li><a href="#" aria-current="page">Home</a></li>
         <li><a href="#">Courses</a></li>
@@ -40,7 +47,7 @@
     </section>
 
     <section id="courses">
-      <!-- Step 130: Accessible search results count -->
+      <!-- Step 130: Search results count with proper status roles -->
       <div id="search-results-count" role="status" aria-live="polite">
         3 courses found
       </div>
@@ -68,8 +75,15 @@
     </section>
   </main>
 
-  <!-- Step 129: Keyboard event listener for pressing 'Enter' on cards -->
   <script>
+    // Step 131: Toggle aria-expanded between true and false on click
+    const menuToggle = document.getElementById('menu-toggle');
+    menuToggle.addEventListener('click', () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+    });
+
+    // Step 129: Keyboard Enter key support for course cards
     document.querySelectorAll('.course-card').forEach(card => {
       card.addEventListener('keydown', function(e) {
         if (e.key === 'Enter') {
