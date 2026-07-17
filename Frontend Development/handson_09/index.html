@@ -1,0 +1,82 @@
+<!-- 
+  HANDS-ON 9 AUDIT REPORT
+  Initial Lighthouse Accessibility Score: 92/100
+  Flagged Issues:
+  - Touch targets do not have sufficient size or spacing.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Step 137: Polyfill script for older browser compatibility -->
+    <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script>
+      cssVars({});
+    </script>
+</head>
+<body>
+  <header>
+    <p class="site-name">Student Portal</p>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#" aria-current="page">Home</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Grades</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <h1>Welcome to the Student Portal</h1>
+      <p>Track your courses, grades, and notifications all in one place.</p>
+      <button>Explore Courses</button>
+    </section>
+
+    <section id="courses">
+      <!-- Step 130: Accessible search results count -->
+      <div id="search-results-count" role="status" aria-live="polite">
+        3 courses found
+      </div>
+      
+      <h2>Your Courses</h2>
+
+      <!-- Step 129: Added tabindex to make cards keyboard focusable -->
+      <article class="course-card" tabindex="0">
+        <h3>Data Structures</h3>
+        <p>Learn arrays, linked lists, trees, and graphs.</p>
+        <span>4 credits</span>
+      </article>
+
+      <article class="course-card" tabindex="0">
+        <h3>Database Systems</h3>
+        <p>SQL, normalization, and transaction management.</p>
+        <span>3 credits</span>
+      </article>
+
+      <article class="course-card" tabindex="0">
+        <h3>Web Development</h3>
+        <p>HTML, CSS, JavaScript, and modern frameworks.</p>
+        <span>3 credits</span>
+      </article>
+    </section>
+  </main>
+
+  <!-- Step 129: Keyboard event listener for pressing 'Enter' on cards -->
+  <script>
+    document.querySelectorAll('.course-card').forEach(card => {
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          alert('You opened: ' + this.querySelector('h3').innerText);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
