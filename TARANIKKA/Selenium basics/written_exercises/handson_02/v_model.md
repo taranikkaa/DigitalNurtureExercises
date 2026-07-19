@@ -151,7 +151,7 @@ Scenario: Create a New Course
 
 Given
 I am logged in as a College Admin.
-
+  
 When
 I enter a valid course name and click the Create button.
 
