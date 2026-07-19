@@ -10,7 +10,7 @@
 4. The test case has high regression risk.
 5. The test uses multiple sets of input data.
 
----
+---  
 
 ### 2. Test Case Selection
 
