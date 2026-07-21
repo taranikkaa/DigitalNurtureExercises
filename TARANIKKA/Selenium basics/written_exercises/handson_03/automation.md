@@ -10,7 +10,7 @@
 4. The test case has high regression risk.
 5. The test uses multiple sets of input data.
 
----  
+---------------------------------------------------------------- 
 
 ### 2. Test Case Selection
 
@@ -23,7 +23,7 @@
 | UI test for login form | Automate | Login is tested in every release |
 | Verify API documentation is accurate | Manual | Requires human review |
 
----
+----------------------------------------------------------------
 
 ### 3. ROI Calculation
 
@@ -191,3 +191,4 @@ CourseManagementAutomation/
 │
 └── README.md
 ```
+----------------------------------------------------------------
