@@ -146,12 +146,12 @@ QA verifies API contracts before integrating different modules.
 -------------------------------------------------
 
 8. Acceptance Criteria (Given-When-Then)
-
+  
 Scenario: Create a New Course
 
 Given
 I am logged in as a College Admin.
-
+  
 When
 I enter a valid course name and click the Create button.
 
@@ -163,3 +163,4 @@ A success message should be displayed.
 
 And
 No duplicate course should be created if the same course already exists.
+--------------------------------------------------------------

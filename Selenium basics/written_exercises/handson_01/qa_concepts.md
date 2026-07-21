@@ -4,7 +4,7 @@ QA CONCEPTS, FUNCTIONAL TESTING & DEFECT LIFECYCLE
 Task 1: Map Testing Types to a Real System
 -------------------------------------------------
 
-1. Testing Types
+1. Testing Types  
 
 Unit Testing:
 Tests a single function or module independently.
@@ -227,4 +227,5 @@ Priority:
 P2
 
 Reason:
-Users experience login issues, but retrying allows access.
+Users experience login issues, but retrying allows access.     
+--------------------------------------------------------------
