@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Async API Engine</title>
+    <link rel="stylesheet" href="../handson_02/style.css">
+    <style>
+        .spinner { display: none; text-align: center; font-size: 1.5rem; font-weight: bold; color: #1e293b; margin: 40px auto; }
+        .error-banner { display: none; background-color: #fee2e2; border: 1px solid #ef4444; color: #991b1b; padding: 15px; border-radius: 6px; margin: 20px auto; max-width: 90%; text-align: center; }
+        .total-credits-banner { font-weight: bold; margin-top: 20px; color: #1e293b; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <p class="site-name">Student Portal (Async Server Mode)</p>
+    </header>
+
+    <main>
+        <div id="error-box" class="error-banner"></div>
+        <div id="loading-spinner" class="spinner">⏳ Fetching courses from remote server...</div>
+
+        <section id="courses">
+            <h2>Your Academic Modules</h2>
+            <div class="course-grid"></div>
+            <p id="total-credits" class="total-credits-banner"></p>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

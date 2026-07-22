@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Interactive</title>
+    <!-- Reusing your styles from hands-on 2 -->
+    <link rel="stylesheet" href="../handson_02/style.css">
+    <style>
+        .controls-bar { display: flex; gap: 1rem; margin: 20px auto; max-width: 90%; }
+        #search-courses { flex: 1; padding: 12px; border: 1px solid #ddd; border-radius: 6px; }
+        #sort-btn { background: #1e293b; color: white; border: none; padding: 12px 20px; border-radius: 6px; cursor: pointer; }
+        .total-credits-banner { font-weight: bold; margin-top: 20px; color: #1e293b; }
+        .grade-display { display: none; margin: 20px auto; padding: 15px; background: #ecfdf5; border: 1px solid #10b981; color: #065f46; border-radius: 6px; max-width: 90%; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <p class="site-name">Student Portal</p>
+    </header>
+
+    <main>
+        
+        <div class="controls-bar">
+            <input type="text" id="search-courses" placeholder="Search courses by name...">
+            <button id="sort-btn">Sort by Credits</button>
+        </div>
+
+       
+        <div id="grade-box" class="grade-display"></div>
+
+        <section id="courses">
+            <h2>Your Academic Modules</h2>
+        
+            <div class="course-grid"></div>
+    
+            <p id="total-credits" class="total-credits-banner"></p>
+        </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

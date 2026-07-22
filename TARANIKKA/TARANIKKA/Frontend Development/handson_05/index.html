@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Form Validation Engine</title>
+    <link rel="stylesheet" href="../handson_02/style.css">
+    <style>
+        .form-container { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); max-width: 500px; margin: 30px auto; }
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; margin-bottom: 6px; font-weight: 600; color: #1e293b; }
+        .form-group input { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; box-sizing: border-box; }
+        .error-message { color: #dc2626; font-size: 0.85rem; margin-top: 4px; display: none; }
+        .submit-btn { background: #10b981; color: white; border: none; width: 100%; padding: 12px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 1rem; }
+        .submit-btn:hover { background: #059669; }
+        .success-banner { display: none; background: #d1fae5; border: 1px solid #10b981; color: #065f46; padding: 12px; text-align: center; border-radius: 6px; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <p class="site-name">Student Portal (Administration Desk)</p>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>Add New Curriculum Module</h2>
+            <div id="success-alert" class="success-banner">🎉 Module registered successfully!</div>
+            
+            <form id="enrollment-form" novalidate>
+                <!-- Course Name Input -->
+                <div class="form-group">
+                    <label for="course-name">Course Name</label>
+                    <input type="text" id="course-name" placeholder="e.g., Cloud Computing">
+                    <div id="name-error" class="error-message">Course name must be at least 3 characters long.</div>
+                </div>
+
+                <!-- Course Code Input (Regex Verified) -->
+                <div class="form-group">
+                    <label for="course-code">Course Code</label>
+                    <input type="text" id="course-code" placeholder="e.g., CS301">
+                    <div id="code-error" class="error-message">Must be exactly 2 capital letters followed by 3 numbers (e.g., AM204).</div>
+                </div>
+
+                <!-- Course Credits Input -->
+                <div class="form-group">
+                    <label for="course-credits">Academic Credits</label>
+                    <input type="number" id="course-credits" placeholder="Value between 1 and 5">
+                    <div id="credits-error" class="error-message">Credits must be a number value between 1 and 5.</div>
+                </div>
+
+                <button type="submit" class="submit-btn">Enroll Module to System</button>
+            </form>
+        </div>
+
+        <!-- Section displaying live updated modules -->
+        <section id="courses">
+            <h2>Active Registered Modules</h2>
+            <div class="course-grid"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
